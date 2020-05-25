@@ -74,8 +74,8 @@ header {
     letter-spacing: 0.17em; /* More space between characters looks better. */
     margin-right: 40px; /* More spacing between menu items. */
     padding-bottom: 5px; /* Fine adjustment of menu items for better display. */
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 10px; /* Ensures hover underline extends beyond text, looks better. */
+    padding-right: 10px; /* Ensures hover underline extends beyond text, looks better. */
     text-decoration: none; /* Remove underline. */
     border-bottom: 2px solid transparent; /* Necessary to avoid strange shifting of menu items on hover. */
 }
@@ -85,6 +85,10 @@ header {
     border-bottom: 2px solid #2196F3; /* Blue 500 - on hover nice animated border effect. */
     transition: color 0.7s; /* On hover color will change in 7/10s of a second. */
     transition: border-bottom 0.7s; /* On hover bottom border will change in 7/10s of a second. */
+}
+
+#header_menu_container a.active {
+    color: #2196F3; /* Blue 500 - selected header menu link text color. */
 }
 /* END HEADER SECTION */
 
@@ -130,14 +134,15 @@ footer {
     align-items: center;
     justify-content: flex-end; /* Push menu items to right-hand side. */
     flex: 1; /* Copyright text also flex 1 so links container takes 50% of width. */
-    padding-right: 40px;
 }
 
 footer a {
     font-size: 14px;
     letter-spacing: 0.17em; /* More space between characters looks better. */
     text-decoration: none; /* Remove underline. */
-    padding-top: 5px;
+    margin-right: 40px; /* More spacing between menu items. */
+    padding-left: 10px; /* Ensures hover underline extends beyond text, looks better. */
+    padding-right: 10px; /* Ensures hover underline extends beyond text, looks better. */
     padding-bottom: 3px;
     border-bottom: 2px solid transparent; /* Necessary to avoid strange shifting of menu items on hover. */
 }
