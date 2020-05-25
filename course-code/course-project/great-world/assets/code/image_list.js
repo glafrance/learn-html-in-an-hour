@@ -1,6 +1,6 @@
-// Return an array of paths to images.
-// In reality we would get image data from a server
-// but that is beyond the scope of this course.
+/* Return an array of paths to images. In reality we would get image data 
+ * from a server but that is beyond the scope of this course.
+ */
 function getImageList () {
     // We could return the array directly, but creating
     // a variable first is better for troubleshooting.
