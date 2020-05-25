@@ -1,0 +1,15 @@
+/* Remove the background image for this page. */
+body {
+    background-image: none;
+}
+#main_wrapper {
+    display: block;
+}
+/* Light text for the text content. */
+p {
+    color: #ECEFF1; /* Material Blue Gray 50 */
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+    letter-spacing: .15em;
+}

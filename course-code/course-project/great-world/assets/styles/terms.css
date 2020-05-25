@@ -1,0 +1,25 @@
+/* Remove the background image for this page. */
+body {
+    background-image: none;
+    background-color: #CFD8DC; /* Blue Gray 100 */
+}
+/* Dark text for the text content. */
+.page-title, p {
+    color: #37474F; /* Material Blue Gray 800 */
+}
+.page-title {
+    padding-bottom: 0;
+}
+#main_wrapper {
+    display: block;
+}
+#content {
+    padding: 0 200px;
+}
+h4 {
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+p {
+    margin-top: 5px;
+}

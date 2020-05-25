@@ -19,11 +19,18 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <!-- JavaScript with functions returning media paths. -->
         <script src="./assets/code/media.js"></script>
-        <!-- Main JavaScript file for this web page. -->
-        <script src="./assets/code/main.js"></script>
+        <!-- JavaScript file for this web page. -->
+        <script src="./assets/code/podcasts_code.js"></script>
+        <style>
+            /* Remove the background image for this page. */
+            body {
+                background-image: none;
+                background-color: #CFD8DC; /* Blue Gray 100 */
+            }
+        </style>
     </head>
-    <!-- onload event causes your function onLoadIndex() to be called when browser loads the web page -->
-    <body onload="onLoadIndex()">
+    <!-- onload event causes your function onLoadPodcasts() to be called when browser loads the web page -->
+    <body onload="onLoadPodcasts()">
         <!-- header has class as dark background also used elsewhere. -->
         <header class="dark-background">
             <!-- id here as logo container unique on page. Links back to this page when copy header on other pages. -->
@@ -32,16 +39,17 @@
                 <h3 id="header_logo_text" class="light-text-one">Great World</h3>
             </a>
             <div id="header_menu_container">
-                <!-- Initial page is IMAGES page. active class CSS tells user current page. -->
-                <a class="light-text-one active" href="./index.html">IMAGES</a>
+                <!-- Main web page is IMAGES page. -->
+                <a class="light-text-one" href="./index.html">IMAGES</a>
                 <!-- Links to additional pages in this website. -->
                 <a class="light-text-one" href="./videos.html">VIDEOS</a>
-                <a class="light-text-one" href="./podcasts.html">PODCASTS</a>
+                <!-- Current page is the podcasts page, so active class CSS tells user current page.  -->
+                <a class="light-text-one active" href="./podcasts.html">PODCASTS</a>
                 <a class="light-text-one" href="./graphics.html">GRAPHICS</a>
                 <a class="light-text-one" href="./quotes.html">QUOTES</a>
             </div>
         </header>
-        <!-- Empty because onload our function onLoadIndex() dynamically adds content. -->
+        <!-- Empty because onload our function onLoadPodcasts() dynamically adds content. -->
         <div id="main_wrapper">
         </div>
         <footer class="dark-background light-text-one">

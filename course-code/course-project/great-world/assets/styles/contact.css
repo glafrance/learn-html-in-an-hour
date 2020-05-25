@@ -1,0 +1,50 @@
+/* Remove the background image for this page. */
+body {
+    background-image: none;
+    background-color: #CFD8DC; /* Blue Gray 100 */
+}
+.page-title {
+    color: #37474F; /* Material Blue Gray 800 */
+    margin-bottom: 0;
+}
+#main_wrapper {
+    display: block;
+}
+h4 {
+    text-align: center;
+    color: #37474F; /* Material Blue Gray 800 */
+    margin-top: 0;
+}
+#form_div {
+    text-align: center;
+}
+label {
+    font-size: 14px;
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+    padding-right: 10px;
+}
+input {
+    height: 20px;
+}
+input, textarea {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+textarea {
+    vertical-align: top;
+    height: 200px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    text-align: start;
+}
+#contactSubmit {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 30px;
+    margin-left: 80px;
+}

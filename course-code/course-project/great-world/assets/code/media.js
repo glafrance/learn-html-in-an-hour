@@ -73,3 +73,45 @@ function getImageList () {
     // Now we return the array of image paths.
     return imageList;
 }
+
+/* Return an array of paths to videos. In reality we would get video data 
+ * from a server but that is beyond the scope of this course.
+ */
+function getVideoList () {
+    // We could return the array directly, but creating
+    // a variable first is better for troubleshooting.
+    var videoList = [
+        "./assets/media/videos/placeholder"
+    ];
+
+    // Now we return the array of video paths.
+    return videoList;
+}
+
+/* Return an array of paths to podcasts. In reality we would get podcast data 
+ * from a server but that is beyond the scope of this course.
+ */
+function getPodcastList () {
+    // We could return the array directly, but creating
+    // a variable first is better for troubleshooting.
+    var podcastList = [
+        "./assets/media/podcasts/placeholder"
+    ];
+
+    // Now we return the array of podcast paths.
+    return podcastList;
+}
+
+/* Return an array of quotes. In reality we would get quote data 
+ * from a server but that is beyond the scope of this course.
+ */
+function getQuotes () {
+    // We could return the array directly, but creating
+    // a variable first is better for troubleshooting.
+    var quotes = [
+        "ADD QUOTE HERE"
+    ];
+
+    // Now we return the array of quotes.
+    return quotes;
+}

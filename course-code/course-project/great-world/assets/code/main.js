@@ -4,20 +4,19 @@ function onLoadIndex() {
     loadImages();
 }
 
-// When main web page loads, programmatically 
-// add HTML to display thumbnails for all images.
+// Programmatically add HTML to display thumbnails for all images.
 function loadImages() {
-    // First we get an array of image paths. In reality you would get 
-    // image data from a server but that is beyond the scope of this course.
+    // Get array of image paths. 
+    // getImageList() function is in a different file, but that file is also 
+    // loaded by web page with another <script> tag, so its code is in scope.
     var imagePaths = getImageList();
 
-    // Now we dynamically create HTML for each image path,
-    // and add each to the images container.
-    imagePaths.forEach(function (path, index) {
+    // Dynamically create HTML for each image, add each to the main content wrapper.
+    imagePaths.forEach(function (path) {
         // Use jQuery to create the <img> tag for the image thumbnail.
         var $image = $('<img src="' + path + '" class="image-thumbnail"/>');
 
-        // Add the <img> element to the <div> containing all the thumbnails.
+        // Add the <img> element to the main content wrapper.
         $("#main_wrapper").append($image);
     });
 }

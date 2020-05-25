@@ -7,7 +7,6 @@
 * {
     font-family: Arial, sans-serif;    
 }
-
 /* Remove default margins and padding on body. 
  * Set a background image that doesn't scroll. 
  */
@@ -18,19 +17,19 @@ body {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-attachment: fixed;
-    background-color: #546E7A;
+    background-color: #546E7A; /* Blue Gray 600 */
     overflow-y: scroll;
 }
-
 .dark-background {
     background-color: #37474F; /* Material Blue Gray 800 */
 }
-
 .light-text-one {
     color: #ECEFF1; /* Material Blue Gray 50 */
 }
+a.active {
+    color: #2196F3; /* Blue 500 - selected header menu link text color. */
+}
 /* END GENERAL STYLES SECTION */
-
 /* START HEADER SECTION */
 header {
     position: fixed; /* Header is fixed so it won't disappear on scroll. */
@@ -39,22 +38,19 @@ header {
     right: 0;
     display: flex; /* flex box allows for better positioning, especially vertical centering. */
     align-items: center;
-    z-index: 100; /* Ensure header is on top of everything else on page. */
     padding: 10px; /* A little space between edge of header and content. */
 }
-
 #logo_container {
     display: inline-flex; /* Text after logo (inline) but flex box for positioning. */
     align-items: center;
     flex: 1; /* Menu container also flex 1 so logo container takes 50% of width. */
     text-decoration: none; /* Remove underline. */
 }
-
+/* Need to set the logo image width and height. */
 #header_logo {
     height: 24px;
     width: 24px;
 }
-
 #header_logo_text {
     display: inline; /* Heading tags default display block, under logo, want text to right of logo. */
     letter-spacing: 0.17em; /* More space between characters looks better. */
@@ -62,53 +58,51 @@ header {
     padding-left: 10px; /* Space between logo and text for better display. */
     margin: 0; /* Heading tags have margin by default, that messes with display. */
 }
-
 #header_menu_container {
     display: flex; /* flex box for better control over positioning. */
     justify-content: flex-end; /* Push menu items to right-hand side. */
     flex: 1; /* Logo container also flex 1 so menu container takes 50% of width. */
-    font-size: 14px;
+    font-size: 12px;
 }
-
 #header_menu_container a {
     letter-spacing: 0.17em; /* More space between characters looks better. */
-    margin-right: 40px; /* More spacing between menu items. */
+    margin-right: 20px; /* More spacing between menu items. */
     padding-bottom: 5px; /* Fine adjustment of menu items for better display. */
     padding-left: 10px; /* Ensures hover underline extends beyond text, looks better. */
     padding-right: 10px; /* Ensures hover underline extends beyond text, looks better. */
     text-decoration: none; /* Remove underline. */
     border-bottom: 2px solid transparent; /* Necessary to avoid strange shifting of menu items on hover. */
 }
-
 #header_menu_container a:hover {
     color: #BDBDBD; /* Material Gray 400 */
     border-bottom: 2px solid #2196F3; /* Blue 500 - on hover nice animated border effect. */
     transition: color 0.7s; /* On hover color will change in 7/10s of a second. */
     transition: border-bottom 0.7s; /* On hover bottom border will change in 7/10s of a second. */
 }
-
-#header_menu_container a.active {
-    color: #2196F3; /* Blue 500 - selected header menu link text color. */
-}
 /* END HEADER SECTION */
-
 /* START MAIN PAGE CONTENT SECTION */
 #main_wrapper {
-    padding-top: 50px;
+    padding-top: 50px; /* Header is fixed so move main content down for better display.  */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* ensures main content flows within flex box container */
     align-items: center;
     justify-content: center;
-    padding-bottom: 70px;
+    padding-bottom: 70px; /* Footer is fixed so ensure when fully scrolled main content at bottom is visible. */
 }
 .image-thumbnail {
-    width: 214px;
-    height: 214px;
-    margin-top: 30px;
+    width: 214px; /* vertical and horizontal images, so for simpler CSS images were all made 640px x 640px in Photoshop, */
+    height: 214px; /* with transparent background, here we reduce width/height to fit more images on page by default. */
+    margin-top: 30px; /* margin on top and right ensures space between images */
     margin-right: 30px;
 }
+.page-title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: .3em;
+}
 /* END MAIN PAGE CONTENT SECTION */
-
 /* START FOOTER SECTION */
 footer {
     display: flex; /* flex box for better control over positioning. */
@@ -117,27 +111,22 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    z-index: 100;/* Ensure header is on top of everything else on page. */
     padding: 10px; /* A little space between edge of header and content. */
 }
-
 #footer_copyright {
     flex: 1; /* Links container also flex 1 so copyright text takes 50% of width. */
     margin: 0; /* Heading tags have margin by default, that messes with display. */
     font-weight: 400; /* Heading tags bold by default, make non-bold. */
     padding-left: 20px;
 }
-
 #footer_links_container {
     display: flex; /* flex box for better control over positioning. */
     align-items: center;
     justify-content: flex-end; /* Push menu items to right-hand side. */
     flex: 1; /* Copyright text also flex 1 so links container takes 50% of width. */
 }
-
 footer a {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.17em; /* More space between characters looks better. */
     text-decoration: none; /* Remove underline. */
     margin-right: 40px; /* More spacing between menu items. */
@@ -146,7 +135,6 @@ footer a {
     padding-bottom: 3px;
     border-bottom: 2px solid transparent; /* Necessary to avoid strange shifting of menu items on hover. */
 }
-
 footer a:hover {
     color: #BDBDBD;
     border-bottom: 2px solid #2196F3; /* Blue 500 - on hover nice animated border effect. */

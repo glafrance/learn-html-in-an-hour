@@ -15,15 +15,15 @@
         <link rel="icon" href="./assets/media/images/logo.ico">
         <!-- Reference the main CSS file for this page. -->
         <link rel="stylesheet" href="./assets/styles/main.css">
-        <!-- Reference the jQuery JavaScript library, used inside main.js. -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <!-- JavaScript with functions returning media paths. -->
-        <script src="./assets/code/media.js"></script>
-        <!-- Main JavaScript file for this web page. -->
-        <script src="./assets/code/main.js"></script>
+        <!-- Reference the additional CSS file for this page. -->
+        <link rel="stylesheet" href="./assets/styles/contact.css">
+        <script>
+            function submitContactMessage() {
+                alert("TODO implement code to send message to server.");
+            }
+        </script>
     </head>
-    <!-- onload event causes your function onLoadIndex() to be called when browser loads the web page -->
-    <body onload="onLoadIndex()">
+    <body>
         <!-- header has class as dark background also used elsewhere. -->
         <header class="dark-background">
             <!-- id here as logo container unique on page. Links back to this page when copy header on other pages. -->
@@ -32,8 +32,8 @@
                 <h3 id="header_logo_text" class="light-text-one">Great World</h3>
             </a>
             <div id="header_menu_container">
-                <!-- Initial page is IMAGES page. active class CSS tells user current page. -->
-                <a class="light-text-one active" href="./index.html">IMAGES</a>
+                <!-- Main web page is IMAGES page. -->
+                <a class="light-text-one" href="./index.html">IMAGES</a>
                 <!-- Links to additional pages in this website. -->
                 <a class="light-text-one" href="./videos.html">VIDEOS</a>
                 <a class="light-text-one" href="./podcasts.html">PODCASTS</a>
@@ -41,14 +41,35 @@
                 <a class="light-text-one" href="./quotes.html">QUOTES</a>
             </div>
         </header>
-        <!-- Empty because onload our function onLoadIndex() dynamically adds content. -->
         <div id="main_wrapper">
+            <h2 class="light-text-one page-title">CONTACT GREAT WORLD</h2>
+            <h4 class="contact-text page-text">Question? Comment? Send us a message!</h4>
+
+            <div id="form_div">
+                <form class="contact-form" onsubmit="return submitContactMessage()">
+                    <label for="email">Email</label>
+                    <input class="page-text" type="email" id="email" name="email" 
+                        placeholder="enter your email address"><br>
+                
+                    <label for="first_last_name">Name</label>
+                    <input type="text" class="page-text" id="first_last_name" 
+                        name="first_last_name"
+                        placeholder="enter your name (optional)"><br>
+                
+                    <label for="message">Subject</label>
+                    <textarea class="page-text" name="message" 
+                        placeholder="enter your message"></textarea><br>
+                
+                    <input id="contactSubmit" class="pinnacle-button page-text" type="submit" value="Submit">                
+                  </form>    
+            </div>
         </div>
         <footer class="dark-background light-text-one">
             <h6 id="footer_copyright">Copyright &copy; Great World. All rights reserved.</h6>
             <div id="footer_links_container">
                 <a class="light-text-one" href="./about.html">ABOUT</a>
-                <a class="light-text-one" href="./contact.html">CONTACT</a>
+                <!-- Current page is the contact page, so active class CSS tells user current page.  -->
+                <a class="light-text-one active" href="./contact.html">CONTACT</a>
                 <a class="light-text-one" href="./terms.html">TERMS OF USE</a>
             </div>
         </footer>
