@@ -14,9 +14,9 @@ function loadImages() {
     // Dynamically create HTML for each image, add each to the main content wrapper.
     imagePaths.forEach(function (path) {
         // Use jQuery to create the <img> tag for the image thumbnail.
-        var $image = $('<img src="' + path + '" class="image-thumbnail"/>');
+        var image = $('<img src="' + path + '" class="image-thumbnail"/>');
 
         // Add the <img> element to the main content wrapper.
-        $("#main_wrapper").append($image);
+        $("#main_wrapper").append(image);
     });
 }

@@ -23,6 +23,9 @@ body {
 .dark-background {
     background-color: #37474F; /* Material Blue Gray 800 */
 }
+.dark-text-one {
+    color: #37474F; /* Material Blue Gray 800 */
+}
 .light-text-one {
     color: #ECEFF1; /* Material Blue Gray 50 */
 }

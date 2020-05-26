@@ -12,11 +12,20 @@ function loadQuotes() {
     var quotes = getQuotes();
 
     // Dynamically create HTML for each quote, add each to the main content wrapper.
-    quotes.forEach(function (path) {
-        // Use jQuery to create the HTML for each quote.
-        // var $image = $('<img src="' + path + '" class="image-thumbnail"/>');
+    quotes.forEach(function (quote) {
+        // Get the quote and the author if available, by splitting text at the dash.
+        var quoteAuthor = quote.split("-");
 
-        // Add the video related elements to the main content wrapper.
-        // $("#main_wrapper").append($image);
+        if (quoteAuthor.length > 0) {
+            // Create the quote element.
+            var quoteText = $('<p class="dark-text-one quote"><em><strong>' + quoteAuthor[0] + '</strong></em></p>');
+
+            // Create the author element, or null if no author.
+            var author = quoteAuthor.length > 1 ? $('<p class="dark-text-one quote-author">' + quoteAuthor[1] + '</p>') : null;
+
+            // Add the quote elements to the main content wrapper.
+            $("#main_wrapper").append(quoteText);
+            $("#main_wrapper").append(author);
+        }
     });
 }

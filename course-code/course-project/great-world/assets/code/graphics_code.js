@@ -15,10 +15,10 @@ function loadGraphics() {
     // Dynamically create HTML for each video, add each to the main content wrapper.
     videoPaths.forEach(function (path) {
         // Use jQuery to create the <video> tag and supporting HTML.
-        // var $image = $('<img src="' + path + '" class="image-thumbnail"/>');
+        // var image = $('<img src="' + path + '" class="image-thumbnail"/>');
 
         // Add the video related elements to the main content wrapper.
-        // $("#main_wrapper").append($image);
+        // $("#main_wrapper").append(image);
     });
     */
 }
