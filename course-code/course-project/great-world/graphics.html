@@ -15,6 +15,8 @@
         <link rel="icon" href="./assets/media/images/logo.ico">
         <!-- Reference the main CSS file for this page. -->
         <link rel="stylesheet" href="./assets/styles/main.css">
+        <!-- Reference the additional CSS file for this page. -->
+        <link rel="stylesheet" href="./assets/styles/graphics.css">
         <!-- Reference the jQuery JavaScript library, used inside main.js. -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <!-- JavaScript with functions returning media paths. -->
@@ -48,8 +50,92 @@
                 <a class="light-text-one" href="./quotes.html">QUOTES</a>
             </div>
         </header>
-        <!-- Empty because onload our function onLoadGraphics() dynamically adds content. -->
-        <div id="main_wrapper">
+        <div id="graphics_wrapper">
+            <h2 class="light-text-one page-title">GRAPHICS IN HTML</h2>
+            <div id="graphics_links">
+                <div class="active" id="svgLink">SVG</div>
+                <div id="canvasLink">CANVAS</div>
+            </div>
+            <div id="graphics_container">
+                <div id="svgContainer">
+                    <p>SVG (Scalable Vector Graphics)</p>
+                    <div class="example-links">
+                        <div>
+                            <input type="radio" id="rectangle" name="svg_example" value="rectangle" checked>
+                            <label for="rectangle">Rectangle</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="circle" name="svg_example" value="circle">
+                            <label for="circle">Circle</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="line" name="svg_example" value="line">
+                            <label for="line">Line</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="path" name="svg_example" value="path">
+                            <label for="path">Path</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="text" name="svg_example" value="text">
+                            <label for="text">Text</label>
+                        </div>
+                    </div>
+                    <div id="examples_container">
+                        <div class="example" id="rectangle_example">
+                            <svg width="410" height="410">
+                                <rect width="400" height="300" />
+                            </svg> 
+                        </div>
+                        <div class="example" id="circle_example">
+                            <svg height="410" width="410">
+                                <circle cx="200" cy="180" r="160" />
+                            </svg> 
+                        </div>
+                        <div class="example" id="line_example">
+                            <svg height="410" width="410">
+                                <line x1="20" y1="50" x2="400" y2="200" />
+                            </svg> 
+                        </div>
+                        <div class="example" id="path_example">
+                            <svg height="410" width="410">
+                                <path id="lineAB" d="M 100 350 l 150 -300" stroke="red"
+                                stroke-width="3" fill="none" />
+                                <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
+                                stroke-width="3" fill="none" />
+                                <path d="M 175 200 l 150 0" stroke="white" stroke-width="3"
+                                fill="none" />
+                                <path d="M 100 350 q 150 -300 300 0" stroke="blue"
+                                stroke-width="5" fill="none" />
+                                <!-- Mark relevant points -->
+                                <g stroke="black" stroke-width="3" fill="black">
+                                  <circle id="pointA" cx="100" cy="350" r="3" />
+                                  <circle id="pointB" cx="250" cy="50" r="3" />
+                                  <circle id="pointC" cx="400" cy="350" r="3" />
+                                </g>
+                                <!-- Label the points -->
+                                <g font-size="30" font-family="sans-serif" fill="black" stroke="none"
+                                text-anchor="middle">
+                                  <text x="100" y="350" dx="-30">A</text>
+                                  <text x="250" y="50" dy="-10">B</text>
+                                  <text x="400" y="350" dx="30">C</text>
+                                </g>
+                              </svg> 
+                        </div>
+                        <div class="example" id="text_example">
+                            <svg height="410" width="410">
+                                <text x="70" y="130" font-size="50px" fill="pink">I LOVE SVG</text>
+                            </svg> 
+                        </div>
+                    </div>
+                </div>
+                <div id="canvasContainer">
+                    <p>HTML &lt;canvas&gt;</p>
+                    <div id="html_examples">
+                        two
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="dark-background light-text-one">
             <h6 id="footer_copyright">Copyright &copy; Great World. All rights reserved.</h6>

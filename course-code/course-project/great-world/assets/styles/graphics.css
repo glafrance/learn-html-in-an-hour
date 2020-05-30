@@ -1,0 +1,54 @@
+#graphics_wrapper {
+    padding-top: 20px;
+    text-align: center;
+    color: #ECEFF1; /* Material Blue Gray 50 */
+}
+.page-title {
+    padding-bottom: 0;
+}
+#graphics_links > div {
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+#graphics_links > div.active {
+    color: #2196F3; /* Blue 500 - selected header menu link text color. */
+}
+#svgLink {
+    margin-right: 300px;
+}
+#graphics_container {
+    margin-top: 30px;
+}
+#canvasContainer {
+    display: none;
+}
+.example-links > div {
+    display: inline;
+}
+.example-links > div:not(:last-child) {
+    margin-right: 30px;
+}
+#examples_container {
+    margin-top: 20px;
+}
+.example {
+    display: none;
+}
+#rectangle_example {
+    display: block;
+}
+svg rect {
+    fill: green;
+    stroke: yellow;
+    stroke-width: 2px;
+}
+svg circle {
+    fill: purple;
+    stroke: orange;
+    stroke-width: 10px;
+}
+svg line {
+    stroke: blue;
+    stroke-width: 5px;
+}
