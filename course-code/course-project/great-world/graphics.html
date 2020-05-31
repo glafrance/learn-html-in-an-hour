@@ -48,6 +48,7 @@
                 <!-- Current page is the graphics page, so active class CSS tells user current page.  -->
                 <a class="light-text-one active" href="./graphics.html">GRAPHICS</a>
                 <a class="light-text-one" href="./quotes.html">QUOTES</a>
+                <a class="light-text-one" href="./fun_stuff.html">FUN STUFF</a>
             </div>
         </header>
         <div id="graphics_wrapper">
@@ -59,71 +60,64 @@
             <div id="graphics_container">
                 <div id="svgContainer">
                     <p>SVG (Scalable Vector Graphics)</p>
-                    <div class="example-links">
+                    <div id="svg-example-links">
                         <div>
-                            <input type="radio" id="rectangle" name="svg_example" value="rectangle" checked>
-                            <label for="rectangle">Rectangle</label>
+                            <input type="radio" id="svg_rectangle" name="svg_example" value="svg_rectangle" checked>
+                            <label for="svg_rectangle">Rectangle</label>
                         </div>
                         <div>
-                            <input type="radio" id="circle" name="svg_example" value="circle">
-                            <label for="circle">Circle</label>
+                            <input type="radio" id="svg_circle" name="svg_example" value="svg_circle">
+                            <label for="svg_circle">Circle</label>
                         </div>
                         <div>
-                            <input type="radio" id="line" name="svg_example" value="line">
-                            <label for="line">Line</label>
+                            <input type="radio" id="svg_line" name="svg_example" value="svg_line">
+                            <label for="svg_line">Line</label>
                         </div>
                         <div>
-                            <input type="radio" id="path" name="svg_example" value="path">
-                            <label for="path">Path</label>
+                            <input type="radio" id="svg_path" name="svg_example" value="svg_path">
+                            <label for="svg_path">Path</label>
                         </div>
                         <div>
-                            <input type="radio" id="text" name="svg_example" value="text">
-                            <label for="text">Text</label>
+                            <input type="radio" id="svg_text" name="svg_example" value="svg_text">
+                            <label for="svg_text">Text</label>
                         </div>
                     </div>
-                    <div id="examples_container">
-                        <div class="example" id="rectangle_example">
-                            <svg width="410" height="410">
+                    <div id="svg_examples_container">
+                        <div class="svg-example" id="svg_rectangle_example">
+                            <svg width="420" height="460">
                                 <rect width="400" height="300" />
                             </svg> 
                         </div>
-                        <div class="example" id="circle_example">
-                            <svg height="410" width="410">
+                        <div class="svg-example" id="svg_circle_example">
+                            <svg width="420" height="460">
                                 <circle cx="200" cy="180" r="160" />
                             </svg> 
                         </div>
-                        <div class="example" id="line_example">
-                            <svg height="410" width="410">
+                        <div class="svg-example" id="svg_line_example">
+                            <svg width="420" height="460">
                                 <line x1="20" y1="50" x2="400" y2="200" />
                             </svg> 
                         </div>
-                        <div class="example" id="path_example">
-                            <svg height="410" width="410">
-                                <path id="lineAB" d="M 100 350 l 150 -300" stroke="red"
-                                stroke-width="3" fill="none" />
-                                <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
-                                stroke-width="3" fill="none" />
-                                <path d="M 175 200 l 150 0" stroke="white" stroke-width="3"
-                                fill="none" />
-                                <path d="M 100 350 q 150 -300 300 0" stroke="blue"
-                                stroke-width="5" fill="none" />
-                                <!-- Mark relevant points -->
-                                <g stroke="black" stroke-width="3" fill="black">
-                                  <circle id="pointA" cx="100" cy="350" r="3" />
-                                  <circle id="pointB" cx="250" cy="50" r="3" />
-                                  <circle id="pointC" cx="400" cy="350" r="3" />
+                        <div class="svg-example" id="svg_path_example">
+                            <svg width="420" height="460">
+                                <path id="lineAB" d="M 75 350 l 150 -300" stroke="red" stroke-width="3" fill="none" />
+                                <path id="lineBC" d="M 225 50 l 150 300" stroke="red" stroke-width="3" fill="none" />
+                                <path d="M 150 200 l 150 0" stroke="white" stroke-width="3" fill="none" />
+                                <path d="M 75 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+                                <g stroke-width="3">
+                                    <circle id="pointA" cx="75" cy="350" r="3" />
+                                    <circle id="pointB" cx="225" cy="50" r="3" />
+                                    <circle id="pointC" cx="375" cy="350" r="3" />
                                 </g>
-                                <!-- Label the points -->
-                                <g font-size="30" font-family="sans-serif" fill="black" stroke="none"
-                                text-anchor="middle">
-                                  <text x="100" y="350" dx="-30">A</text>
-                                  <text x="250" y="50" dy="-10">B</text>
-                                  <text x="400" y="350" dx="30">C</text>
+                                <g font-size="30" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+                                    <text x="75" y="350" dx="-30">A</text>
+                                    <text x="225" y="50" dy="-10">B</text>
+                                    <text x="375" y="350" dx="30">C</text>
                                 </g>
                               </svg> 
                         </div>
-                        <div class="example" id="text_example">
-                            <svg height="410" width="410">
+                        <div class="svg-example" id="svg_text_example">
+                            <svg width="420" height="460">
                                 <text x="70" y="130" font-size="50px" fill="pink">I LOVE SVG</text>
                             </svg> 
                         </div>
@@ -131,8 +125,32 @@
                 </div>
                 <div id="canvasContainer">
                     <p>HTML &lt;canvas&gt;</p>
-                    <div id="html_examples">
-                        two
+                    <div id="canvas-example-links">
+                        <div>
+                            <input type="radio" id="canvas_rectangle" name="canvas_example" value="canvas_rectangle" checked>
+                            <label for="canvas_rectangle">Rectangle</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="canvas_circle" name="canvas_example" value="canvas_circle">
+                            <label for="canvas_circle">Circle</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="canvas_line" name="canvas_example" value="canvas_line">
+                            <label for="canvas_line">Line</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="canvas_path" name="canvas_example" value="canvas_path">
+                            <label for="canvas_path">Path</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="canvas_text" name="canvas_example" value="canvas_text">
+                            <label for="canvas_text">Text</label>
+                        </div>
+                    </div>
+                    <div id="canvas_examples_container">
+                        <canvas id="canvasElem" width="420" height="460">
+                            Your browser does not support the canvas element.
+                        </canvas>
                     </div>
                 </div>
             </div>

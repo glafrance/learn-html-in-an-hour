@@ -15,10 +15,39 @@
         <link rel="icon" href="./assets/media/images/logo.ico">
         <!-- Reference the main CSS file for this page. -->
         <link rel="stylesheet" href="./assets/styles/main.css">
-        <!-- Reference the additional CSS file for this page. -->
-        <link rel="stylesheet" href="./assets/styles/terms.css">
+        <!-- Reference the jQuery JavaScript library, used inside main.js. -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <!-- JavaScript with functions returning media paths. -->
+        <script src="./assets/code/media.js"></script>
+        <!-- JavaScript file for this web page. -->
+        <script src="./assets/code/quotes_code.js"></script>
+        <style>
+            /* Remove the background image for this page. */
+            body {
+                background-image: none;
+                background-color: #CFD8DC; /* Blue Gray 100 */
+            }
+            #main_wrapper {
+                display: block;
+                text-align: center;
+            }
+            .quote {
+                font-size: 16px; 
+                margin-bottom: 0;
+                letter-spacing: .13em;
+            }
+            .quote-author {
+                font-size: 14px; 
+                margin-top: 5px;
+                margin-bottom: 40px;
+            }
+            p {
+                display: block;
+            }
+        </style>
     </head>
-    <body>
+    <!-- onload event causes your function onLoadQuotes() to be called when browser loads the web page -->
+    <body onload="onLoadQuotes()">
         <!-- header has class as dark background also used elsewhere. -->
         <header class="dark-background">
             <!-- id here as logo container unique on page. Links back to this page when copy header on other pages. -->
@@ -34,31 +63,20 @@
                 <a class="light-text-one" href="./poems.html">POEMS</a>
                 <a class="light-text-one" href="./graphics.html">GRAPHICS</a>
                 <a class="light-text-one" href="./quotes.html">QUOTES</a>
-                <a class="light-text-one" href="./fun_stuff.html">FUN STUFF</a>
-
+                <!-- Current page is the fun stuff page, so active class CSS tells user current page.  -->
+                <a class="light-text-one active" href="./fun_stuff.html">FUN STUFF</a>
             </div>
         </header>
+        <!-- Empty because onload our function onLoadQuotes() dynamically adds content. -->
         <div id="main_wrapper">
-            <h2 class="light-text-one page-title">TERMS OF USE</h2>
-            <div id="content">
-                <h4>USAGE</h4>
-                <p>You are free to use the images, videos, poems, etc. in your own work, but you cannot sell them or make them available to others in a format that would allow them to sell them.</p>
-                <p>Use of our intellectual property in your work requires attribution.</p>
-
-                <h4>RESTRICTIONS</h4>
-                <p>Just sample terms of use content, which you would modify based on your content and advice of an attorney.</p>
-
-                <h4>ADDITIONAL AGREEMENTS</h4>
-                <p>Yet more legalistic text, ensureing you cover everything, after working with your attorney.</p>
-            </div>
+            <h2 class="dark-text-one page-title">INSPIRATIONAL QUOTES</h2>
         </div>
         <footer class="dark-background light-text-one">
             <h6 id="footer_copyright">Copyright &copy; Great World. All rights reserved.</h6>
             <div id="footer_links_container">
                 <a class="light-text-one" href="./about.html">ABOUT</a>
                 <a class="light-text-one" href="./contact.html">CONTACT</a>
-                <!-- Current page is the terms of use page, so active class CSS tells user current page.  -->
-                <a class="light-text-one active" href="./terms.html">TERMS OF USE</a>
+                <a class="light-text-one" href="./terms.html">TERMS OF USE</a>
             </div>
         </footer>
     </body>

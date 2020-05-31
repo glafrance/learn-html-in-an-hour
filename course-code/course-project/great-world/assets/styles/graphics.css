@@ -23,19 +23,19 @@
 #canvasContainer {
     display: none;
 }
-.example-links > div {
+#svg-example-links > div, #canvas-example-links > div {
     display: inline;
 }
-.example-links > div:not(:last-child) {
+#svg-example-links > div:not(:last-child), #canvas-example-links > div:not(:last-child) {
     margin-right: 30px;
 }
-#examples_container {
+#svg_examples_container, #canvas_examples_container {
     margin-top: 20px;
 }
-.example {
+.svg-example, .canvas-example {
     display: none;
 }
-#rectangle_example {
+#svg_rectangle_example, #canvas_rectangle_example {
     display: block;
 }
 svg rect {

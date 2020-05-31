@@ -46,7 +46,7 @@ header {
 #logo_container {
     display: inline-flex; /* Text after logo (inline) but flex box for positioning. */
     align-items: center;
-    flex: 1; /* Menu container also flex 1 so logo container takes 50% of width. */
+    flex: 1; /* Menu container flex 2 so logo container takes 33% of width. */
     text-decoration: none; /* Remove underline. */
 }
 /* Need to set the logo image width and height. */
@@ -64,7 +64,7 @@ header {
 #header_menu_container {
     display: flex; /* flex box for better control over positioning. */
     justify-content: flex-end; /* Push menu items to right-hand side. */
-    flex: 1; /* Logo container also flex 1 so menu container takes 50% of width. */
+    flex: 2; /* Logo container flex 1 so menu container takes 66% of width. */
     font-size: 12px;
 }
 #header_menu_container a {
