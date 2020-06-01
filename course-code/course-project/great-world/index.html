@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Sets page character set to utf-8 to display characters from almost any language. -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <!-- Ensures good display on mobile devices if we have CSS for that. -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- description <meta> tag important for SEO and search results display. -->
-        <!-- customize description for each website page -->
-        <!-- https://moz.com/learn/seo/meta-description -->
         <meta name="description" content="Great World - photos, videos, poems, quotes - what a wonderful world">
-        <!-- Title tag text appears in tab, also important for SEO. -->
-        <!-- https://moz.com/learn/seo/title-tag -->
         <title>Great World - what a wonderful world</title>
-        <!-- Reference the icon image, displays in browser tab. -->
         <link rel="icon" href="./assets/media/images/logo.ico">
-        <!-- Reference the main CSS file for this page. -->
         <link rel="stylesheet" href="./assets/styles/main.css">
-        <!-- Reference the jQuery JavaScript library, used inside main.js. -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <!-- JavaScript with functions returning media paths. -->
         <script src="./assets/code/media.js"></script>
-        <!-- Main JavaScript file for this web page. -->
         <script src="./assets/code/main.js"></script>
     </head>
-    <!-- onload event causes your function onLoadIndex() to be called when browser loads the web page -->
     <body onload="onLoadIndex()">
-        <!-- header has class as dark background also used elsewhere. -->
         <header class="dark-background">
-            <!-- id here as logo container unique on page. Links back to this page when copy header on other pages. -->
             <a id="logo_container" href="index.html">
                 <img id="header_logo" src="./assets/media/images/logo.png" />
                 <h3 id="header_logo_text" class="light-text-one">Great World</h3>
             </a>
             <div id="header_menu_container">
-                <!-- Initial page is IMAGES page. active class CSS tells user current page. -->
                 <a class="light-text-one active" href="./index.html">IMAGES</a>
-                <!-- Links to additional pages in this website. -->
                 <a class="light-text-one" href="./videos.html">VIDEOS</a>
                 <a class="light-text-one" href="./poems.html">POEMS</a>
                 <a class="light-text-one" href="./graphics.html">GRAPHICS</a>
@@ -44,7 +27,6 @@
 
             </div>
         </header>
-        <!-- Empty because onload our function onLoadIndex() dynamically adds content. -->
         <div id="main_wrapper">
         </div>
         <footer class="dark-background light-text-one">

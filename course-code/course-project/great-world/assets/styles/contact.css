@@ -1,10 +1,9 @@
-/* Remove the background image for this page. */
 body {
     background-image: none;
-    background-color: #CFD8DC; /* Blue Gray 100 */
+    background-color: #CFD8DC;
 }
 .page-title {
-    color: #37474F; /* Material Blue Gray 800 */
+    color: #37474F;
     margin-bottom: 0;
 }
 #main_wrapper {
@@ -12,7 +11,7 @@ body {
 }
 h4 {
     text-align: center;
-    color: #37474F; /* Material Blue Gray 800 */
+    color: #37474F;
     margin-top: 0;
 }
 #form_div {

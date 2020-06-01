@@ -1,15 +1,7 @@
-/* Colors are from material.io palettes:
- * https://material.io/design/color/the-color-system.html
- */
 
-/* START GENERAL STYLES SECTION */
-/* Set the default font-family for all text on the website. */
 * {
     font-family: Arial, sans-serif;    
 }
-/* Remove default margins and padding on body. 
- * Set a background image that doesn't scroll. 
- */
 body {
     margin: 0;
     padding: 0;
@@ -17,85 +9,84 @@ body {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-attachment: fixed;
-    background-color: #546E7A; /* Blue Gray 600 */
+    background-color: #546E7A; 
     overflow-y: scroll;
 }
 .dark-background {
-    background-color: #37474F; /* Material Blue Gray 800 */
+    background-color: #37474F;
 }
 .dark-text-one {
-    color: #37474F; /* Material Blue Gray 800 */
+    color: #37474F;
 }
 .light-text-one {
-    color: #ECEFF1; /* Material Blue Gray 50 */
+    color: #ECEFF1; 
 }
 a.active {
-    color: #2196F3; /* Blue 500 - selected header menu link text color. */
+    color: #2196F3; 
 }
-/* END GENERAL STYLES SECTION */
-/* START HEADER SECTION */
+
+
 header {
-    position: fixed; /* Header is fixed so it won't disappear on scroll. */
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
-    display: flex; /* flex box allows for better positioning, especially vertical centering. */
+    display: flex; 
     align-items: center;
-    padding: 10px; /* A little space between edge of header and content. */
+    padding: 10px; 
 }
 #logo_container {
-    display: inline-flex; /* Text after logo (inline) but flex box for positioning. */
+    display: inline-flex; 
     align-items: center;
-    flex: 1; /* Menu container flex 2 so logo container takes 33% of width. */
-    text-decoration: none; /* Remove underline. */
+    flex: 1; 
+    text-decoration: none; 
 }
-/* Need to set the logo image width and height. */
 #header_logo {
     height: 24px;
     width: 24px;
 }
 #header_logo_text {
-    display: inline; /* Heading tags default display block, under logo, want text to right of logo. */
-    letter-spacing: 0.17em; /* More space between characters looks better. */
-    padding-top: 3px; /* Fine adjustment of logo text for better display. */
-    padding-left: 10px; /* Space between logo and text for better display. */
-    margin: 0; /* Heading tags have margin by default, that messes with display. */
+    display: inline; 
+    letter-spacing: 0.17em; 
+    padding-top: 3px; 
+    padding-left: 10px; 
+    margin: 0; 
 }
 #header_menu_container {
-    display: flex; /* flex box for better control over positioning. */
-    justify-content: flex-end; /* Push menu items to right-hand side. */
-    flex: 2; /* Logo container flex 1 so menu container takes 66% of width. */
+    display: flex; 
+    justify-content: flex-end; 
+    flex: 2; 
     font-size: 12px;
 }
 #header_menu_container a {
-    letter-spacing: 0.17em; /* More space between characters looks better. */
-    margin-right: 20px; /* More spacing between menu items. */
-    padding-bottom: 5px; /* Fine adjustment of menu items for better display. */
-    padding-left: 10px; /* Ensures hover underline extends beyond text, looks better. */
-    padding-right: 10px; /* Ensures hover underline extends beyond text, looks better. */
-    text-decoration: none; /* Remove underline. */
-    border-bottom: 2px solid transparent; /* Necessary to avoid strange shifting of menu items on hover. */
+    letter-spacing: 0.17em; 
+    margin-right: 20px; 
+    padding-bottom: 5px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    text-decoration: none; 
+    border-bottom: 2px solid transparent; 
 }
 #header_menu_container a:hover {
-    color: #BDBDBD; /* Material Gray 400 */
-    border-bottom: 2px solid #2196F3; /* Blue 500 - on hover nice animated border effect. */
-    transition: color 0.7s; /* On hover color will change in 7/10s of a second. */
-    transition: border-bottom 0.7s; /* On hover bottom border will change in 7/10s of a second. */
+    color: #BDBDBD; 
+    border-bottom: 2px solid #2196F3; 
+    transition: color 0.7s; 
+    transition: border-bottom 0.7s; 
 }
-/* END HEADER SECTION */
-/* START MAIN PAGE CONTENT SECTION */
+
+
 #main_wrapper {
-    padding-top: 50px; /* Header is fixed so move main content down for better display.  */
+    padding-top: 50px; 
     display: flex;
-    flex-wrap: wrap; /* ensures main content flows within flex box container */
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: center;
-    padding-bottom: 70px; /* Footer is fixed so ensure when fully scrolled main content at bottom is visible. */
+    padding-bottom: 70px; 
 }
 .image-thumbnail {
-    width: 214px; /* vertical and horizontal images, so for simpler CSS images were all made 640px x 640px in Photoshop, */
-    height: 214px; /* with transparent background, here we reduce width/height to fit more images on page by default. */
-    margin-top: 30px; /* margin on top and right ensures space between images */
+    width: 214px; 
+    height: 214px; 
+    margin-top: 30px; 
     margin-right: 30px;
 }
 .page-title {
@@ -105,43 +96,43 @@ header {
     text-align: center;
     letter-spacing: .3em;
 }
-/* END MAIN PAGE CONTENT SECTION */
-/* START FOOTER SECTION */
+
+
 footer {
-    display: flex; /* flex box for better control over positioning. */
+    display: flex; 
     align-items: center;
-    position: fixed; /* Sticky footer won't disappear with more page content. */
+    position: fixed; 
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 10px; /* A little space between edge of header and content. */
+    padding: 10px; 
 }
 #footer_copyright {
-    flex: 1; /* Links container also flex 1 so copyright text takes 50% of width. */
-    margin: 0; /* Heading tags have margin by default, that messes with display. */
-    font-weight: 400; /* Heading tags bold by default, make non-bold. */
+    flex: 1; 
+    margin: 0; 
+    font-weight: 400; 
     padding-left: 20px;
 }
 #footer_links_container {
-    display: flex; /* flex box for better control over positioning. */
+    display: flex; 
     align-items: center;
-    justify-content: flex-end; /* Push menu items to right-hand side. */
-    flex: 1; /* Copyright text also flex 1 so links container takes 50% of width. */
+    justify-content: flex-end; 
+    flex: 1; 
 }
 footer a {
     font-size: 12px;
-    letter-spacing: 0.17em; /* More space between characters looks better. */
-    text-decoration: none; /* Remove underline. */
-    margin-right: 40px; /* More spacing between menu items. */
-    padding-left: 10px; /* Ensures hover underline extends beyond text, looks better. */
-    padding-right: 10px; /* Ensures hover underline extends beyond text, looks better. */
+    letter-spacing: 0.17em; 
+    text-decoration: none; 
+    margin-right: 40px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
     padding-bottom: 3px;
-    border-bottom: 2px solid transparent; /* Necessary to avoid strange shifting of menu items on hover. */
+    border-bottom: 2px solid transparent; 
 }
 footer a:hover {
     color: #BDBDBD;
-    border-bottom: 2px solid #2196F3; /* Blue 500 - on hover nice animated border effect. */
-    transition: color 0.7s; /* On hover color will change in 7/10s of a second. */
-    transition: border-bottom 0.7s; /* On hover bottom border will change in 7/10s of a second. */
+    border-bottom: 2px solid #2196F3; 
+    transition: color 0.7s; 
+    transition: border-bottom 0.7s; 
 }
-/* END FOOTER SECTION */
+
